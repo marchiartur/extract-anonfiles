@@ -13,7 +13,7 @@ const getHref = catchAsync(async (request, response) => {
       response.status(200).json({ href: serviceResponse });
       return;
     } else {
-      response.status(402).send(message);
+      response.status(500).send(message);
       return;
     }
   } catch (err) {
